@@ -1,7 +1,7 @@
 use std::env;
 
-const C_RATIO: f64 = 0.5555555556;
-const F_RATIO: f64 = 1.8;
+const CELSIUS_RATIO: f64 = 0.5555555556;
+const FAHRENHEIT_RATIO: f64 = 1.8;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -20,11 +20,11 @@ fn main() {
 }
 
 fn celsius_to_fahrenheit(temp: f64) -> f64 {
-    let converted_temp = temp * F_RATIO;
+    let converted_temp = temp * FAHRENHEIT_RATIO;
     converted_temp + 32.0
 }
 
 fn fahrenheit_to_celsius(temp: f64) -> f64 {
     let converted_temp = temp - 32.0;
-    converted_temp * C_RATIO
+    converted_temp * CELSIUS_RATIO
 }
